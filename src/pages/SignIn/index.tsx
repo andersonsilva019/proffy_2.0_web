@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { FiEye, FiEyeOff, FiMail } from 'react-icons/fi';
+import { Input } from '../../components';
 import {
   Container,
   Background,
   Content,
   Title,
   Form,
-  Input,
   Aside,
   Remember,
   Checkbox,
@@ -17,6 +18,12 @@ import {
 } from './styles';
 
 const SignIn: React.FC = () => {
+  const [isVisiblePassword, setIsVisiblePassword] = useState(false);
+
+  const handleToggleVisiblePassword = useCallback(() => {
+    setIsVisiblePassword(!isVisiblePassword);
+  }, [isVisiblePassword]);
+
   return (
     <Container>
       <Background />
@@ -27,11 +34,17 @@ const SignIn: React.FC = () => {
           }}
         >
           <Title>Faça login</Title>
-          <Input placeholder="E-mail" type="text" />
-          <Input placeholder="Senha" type="text" />
+          <Input name="email" placeholder="E-mail" type="text" />
+          <Input
+            name="password"
+            placeholder="Senha"
+            type={isVisiblePassword ? 'text' : 'password'}
+            icon={isVisiblePassword ? FiEye : FiEyeOff}
+            toggleVisiblePassword={handleToggleVisiblePassword}
+          />
           <Aside>
             <Remember>
-              <Checkbox type="checkbox" />
+              <Checkbox name="check" type="checkbox" />
               <Text>Lembrar-me</Text>
             </Remember>
             <Link to="/">Esqueci minha senha</Link>

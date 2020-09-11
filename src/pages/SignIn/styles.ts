@@ -38,18 +38,9 @@ export const Form = styled(Unform)`
   flex-direction: column;
 `;
 
-export const Input = styled.input`
-  background: var(--color-input-background);
-  border: 1px solid var(--color-line-in-white);
-  border-radius: 0.8rem;
-  height: 7.2rem;
-  width: 35.2rem;
-  padding: 2rem;
+// export const Input = styled.input`
 
-  ::placeholder {
-    color: var(--color-text-complement);
-  }
-`;
+// `;
 
 export const Aside = styled.div`
   display: flex;
