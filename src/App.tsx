@@ -1,11 +1,13 @@
 import React from 'react';
-import signIn from './pages/signIn';
+import GlobalStyles from './styles/global';
+import Routes from './routes';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>teste</h1>
-    </div>
+    <>
+      <Routes />
+      <GlobalStyles />
+    </>
   );
 };
 
