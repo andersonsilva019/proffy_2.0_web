@@ -48,6 +48,19 @@ export const Container = styled.div<IContainerProps>`
     `}
 
   ${props =>
+    props.isFilled &&
+    css`
+      div {
+        position: absolute;
+        left: 0;
+        background: var(--color-primary);
+        width: 2px;
+        height: 48px;
+        transition: background 0.2s;
+      }
+    `}
+
+  ${props =>
     props.disabledCursorPointer &&
     css`
       button {
