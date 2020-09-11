@@ -33,7 +33,7 @@ const SignIn: React.FC = () => {
             console.log('teste');
           }}
         >
-          <Title>Faça login</Title>
+          <Title>Fazer login</Title>
           <Input name="email" placeholder="E-mail" type="text" />
           <Input
             name="password"

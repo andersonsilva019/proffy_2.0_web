@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Form as Unform } from '@unform/web';
 import signInBackgroundImage from '../../assets/background-signin.png';
 
@@ -16,10 +16,23 @@ export const Background = styled.div`
   background-size: cover;
 `;
 
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+`;
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  animation: ${appearFromLeft} 1s;
 
   place-content: center;
 
@@ -60,7 +73,39 @@ export const Remember = styled.div`
   align-items: center;
 `;
 export const Checkbox = styled.input`
-  background: var(--color-line-in-white);
+  background: var(--color-box-base);
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 0.8rem;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f00c';
+    font-size: 1.6rem;
+    color: var(--color-box-base);
+    display: none;
+  }
+
+  transition: background 0.2s;
+
+  &:hover {
+    background: #dcdce6;
+  }
+
+  &:checked {
+    background: var(--color-secundary);
+  }
+
+  &:checked:after {
+    display: block;
+  }
 `;
 export const Text = styled.div`
   margin-left: 1.6rem;
