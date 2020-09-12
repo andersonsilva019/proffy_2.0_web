@@ -34,8 +34,21 @@ export const Avatar = styled.img`
 `;
 export const Name = styled.strong`
   color: var(--color-text-in-primary);
+  font-size: 1.4rem;
+  font-family: 'Poppins';
 `;
-export const IconPower = styled(FiPower)``;
+
+export const Button = styled.button`
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  background: var(--color-primary-dark);
+  border: 0;
+  border-radius: 0.8rem;
+`;
+export const IconPower = styled(FiPower)`
+  color: var(--color-text-in-primary);
+`;
 export const Main = styled.div``;
 export const Group = styled.div``;
 export const Logo = styled.img``;
