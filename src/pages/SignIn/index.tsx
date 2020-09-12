@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { FiEye, FiEyeOff, FiMail } from 'react-icons/fi';
+import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { Input } from '../../components';
 import {
   Container,
@@ -47,7 +47,7 @@ const SignIn: React.FC = () => {
               <Checkbox name="check" type="checkbox" />
               <Text>Lembrar-me</Text>
             </Remember>
-            <Link to="/">Esqueci minha senha</Link>
+            <Link to="/dashboard">Esqueci minha senha</Link>
           </Aside>
           <ButtonSubmit>Entrar</ButtonSubmit>
           <Footer>
