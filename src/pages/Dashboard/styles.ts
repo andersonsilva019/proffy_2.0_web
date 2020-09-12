@@ -49,8 +49,24 @@ export const Button = styled.button`
 export const IconPower = styled(FiPower)`
   color: var(--color-text-in-primary);
 `;
-export const Main = styled.div``;
-export const Group = styled.div``;
+export const Main = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15rem;
+`;
+export const Group = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 export const Logo = styled.img``;
-export const Description = styled.div``;
-export const Image = styled.img``;
+export const Description = styled.div`
+  color: var(--color-text-in-primary);
+  font-size: 3rem;
+  width: 29.8rem;
+`;
+export const Image = styled.img`
+  width: 60rem;
+  height: 35rem;
+`;
